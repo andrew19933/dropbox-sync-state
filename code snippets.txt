@@ -1,0 +1,28 @@
+;SetControlDelay -1
+;ControlClick, ToolbarWindow321, ahk_pid %holder%,, RIGHT, 1
+;;;; list of controls after clicking on windows toolbar
+;Start1
+;TrayButton1
+;TrayDummySearchControl1
+;DynamicContent11
+;Button1
+;Static1
+;ToolbarWindow321
+;TrayButton2
+;TrayButton3
+;ReBarWindow321
+;MSTaskSwWClass1
+;MSTaskListWClass1
+;DynamicContent21
+;TrayNotifyWnd1
+;Button2
+;Button3
+;ToolbarWindow322
+;SysPager1
+;ToolbarWindow323
+;TrayInputIndicatorWClass1
+;IMEModeButton1
+;InputIndicatorButton1
+;TrayClockWClass1
+;TrayButton4
+;TrayShowDesktopButtonWClass1
