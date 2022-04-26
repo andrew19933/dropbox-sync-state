@@ -1,7 +1,9 @@
 # dropbox-sync-state
 This is a basic script that creates a keyboard shortcut that changes the sync state of Dropbox between 'actively syncing' and 'syncing paused indefinitely'.
 
-It is quite annoying to do this by moving the mouse and clicking.
+Press 'Win + Shift + D' to toggle Dropbox's sync state.
+
+It was quite annoying to have to do this by moving the mouse and clicking.
 
 As of now, it appears there is no way to (officially) control Dropbox in this way through the command line.
 
