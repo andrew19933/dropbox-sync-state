@@ -10,6 +10,10 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 DetectHiddenWindows, On
 
+
+
+; Win + Shift + D
+#+d::
 ; gets current active window
 curWindowID := WinExist("A")
 
@@ -30,3 +34,5 @@ MouseMove, %xpos%, %ypos%, 0
 
 ; reactivates originally active window
 WinActivate, ahk_id %curWindowID%
+
+return
