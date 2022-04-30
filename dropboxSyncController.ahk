@@ -36,3 +36,12 @@ MouseMove, %xpos%, %ypos%, 0
 WinActivate, ahk_id %curWindowID%
 
 return
+
+
+; Win + Shift + E
+#+e::
+PostMessage, 0x111, 1061 ,,, ahk_class DropboxTrayIcon ; Resume/Pause syncing
+; PostMessage, 0x111, 1024 ,,, ahk_class DropboxTrayIcon ; Open Dropbox Folder
+
+
+return
