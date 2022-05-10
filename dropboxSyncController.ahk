@@ -38,10 +38,17 @@ WinActivate, ahk_id %curWindowID%
 return
 
 
+
 ; Win + Shift + E
 #+e::
-PostMessage, 0x111, 1061 ,,, ahk_class DropboxTrayIcon ; Resume/Pause syncing
-; PostMessage, 0x111, 1024 ,,, ahk_class DropboxTrayIcon ; Open Dropbox Folder
+; opens and quickly closes the context menu of the Dropbox icon (equivalent to Ctrl + Click on the icon)
+dllcall("keybd_event", int, 162, int, 29, int, 0, int, 0) ; CTRL down
+PostMessage, 0x0414,, 0x0201,, ahk_class DropboxTrayIcon ; WM_LBUTTONDOWN
+PostMessage, 0x0414,, 0x0202,, ahk_class DropboxTrayIcon ; WM_LBUTTONUP
+dllcall("keybd_event", int, 162, int, 29, int, 2, int, 0) ; CTRL up
+Sleep 1 ; needed otherwise Esc will be sent too fast
+Send {Esc}
 
+PostMessage, 0x111, 1061 ,,, ahk_class DropboxTrayIcon ; send Resume/Pause syncing command
 
 return
