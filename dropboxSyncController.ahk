@@ -41,6 +41,9 @@ return
 
 ; Win + Shift + E
 #+e::
+; gets current active window
+curWindowID := WinExist("A")
+
 ; opens and quickly closes the context menu of the Dropbox icon (equivalent to Ctrl + Click on the icon)
 dllcall("keybd_event", int, 162, int, 29, int, 0, int, 0) ; CTRL down
 PostMessage, 0x0414,, 0x0201,, ahk_class DropboxTrayIcon ; WM_LBUTTONDOWN
@@ -50,5 +53,8 @@ Sleep 1 ; needed otherwise Esc will be sent too fast
 Send {Esc}
 
 PostMessage, 0x111, 1061 ,,, ahk_class DropboxTrayIcon ; send Resume/Pause syncing command
+
+; reactivates originally active window
+WinActivate, ahk_id %curWindowID%
 
 return
