@@ -9,9 +9,11 @@ As of now, it appears there is no way to (officially) control Dropbox in this wa
 
 
 # issues
-1. With method 1, the sleep value can sometimes be too short; I've had issues with it even at 500. Just need to hit the hotkey again to get it to work. Also need to ensure the Dropbox icon is leftmost in the system tray.
+1. DOES NOT WORK ANYMORE (as of at least 26 August 2022)!!! Seems Dropbox has removed the context menu entirely...
 
-2. Sometimes `Send {Esc}` doesn't work to close the context menu in method 2.
+2. With method 1, the sleep value can sometimes be too short; I've had issues with it even at 500. Just need to hit the hotkey again to get it to work. Also need to ensure the Dropbox icon is leftmost in the system tray.
+
+3. Sometimes `Send {Esc}` doesn't work to close the context menu in method 2.
 
 
 # notes/thoughts
